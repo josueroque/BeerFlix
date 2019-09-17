@@ -1,7 +1,11 @@
 /*eslint-disable no-undef*/
-const lStorage={
-  setItem:()=> localStorage.setItem(key,value),
-  getItem: key=> localStorage.getItem(key),
+// const lStorage={
+//   setItem:()=> localStorage.setItem(key,value),
+//   getItem: key=> localStorage.getItem(key),
+// };
+const lStorage = {
+  setItem: (key, value) => localStorage.setItem(key, value),
+  getItem: key => localStorage.getItem(key),
 };
 
 const cookieStorage={

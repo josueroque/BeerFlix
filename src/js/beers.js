@@ -32,10 +32,12 @@ const templateBeer = ({ beerId,principal, name, image, description }) => `
   </a>
 `;
 
+
+
 const renderBeers = (element, beers ) => {
- console.log(beers);
+ //console.log(beers);
   const htmlBeers = beers.slice(0,10).map((beer,index) =>{
-    // if(index<2){
+    // if(index<0){
     //   return templateBeer({...beer,principal:true});
     // }
        return templateBeer({...beer,principal:false});
@@ -70,6 +72,7 @@ const renderBeersDOM = async text => {
     renderLoader('show','hide');
   }
 };
+
 
 
 

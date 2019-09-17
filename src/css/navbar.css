@@ -1,5 +1,10 @@
+@font-face {
+  font-family: beer-font;
+  src: url(../fonts/Bira.ttf)
+}
+
 .app-navbar {
-  background-color: var(--main-bg-color);
+  background-color:#e7c60e;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +16,7 @@
   max-height: 100px;
   min-height: 50px;
   z-index: 3;
+  font-family:beer-font
   /* state */
 }
 

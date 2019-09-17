@@ -128,10 +128,11 @@
     visibility: hidden;
     opacity: 0;
   }
-  .secondary .card-content-text h2,
+.secondary .card-content-text h2,
 .secondary .card-header h2 {
     font-size: 1.2rem;
-    color: #FFFFFF;
+    color:black;
+    font-weight: 700;
   }
   .secondary:hover .card-header {
     z-index: 1;
@@ -140,7 +141,8 @@
     display: none;
   }
   .secondary:hover .card-content .card-content-image {
-    display: none;
+    /* display: none; */
+   opacity: 0.30;
   }
   .secondary:hover .card-content p {
     max-height: 200px;
@@ -155,7 +157,8 @@
 .secondary:hover .card-header,
 .secondary:hover .card-content,
 .secondary:hover i {
-    background-color: #212121;
-    color: #FFFFFF;
+    background-color: white;
+    color:black;
+   
   }
 }

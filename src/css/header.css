@@ -1,14 +1,18 @@
 /* HEADER */
 @font-face {
-  font-family: juego-tronos;
-  src: url(../fonts/gt.ttf)
+  font-family: beer-font;
+  src: url(../fonts/Bira.ttf)
+}
+@font-face {
+  font-family: jackport;
+  src: url(../fonts/JACKPORTCOLLEGENCV.ttf)
 }
 .header-hide{
   display: none;
 }
 .header{
-  height: 90vh;
-  opacity:0.75;
+  height: 45vw;
+  /* opacity:0.65; */
   background-image: url(../img/beer1.jpg);
   background-repeat: no-repeat;
   background-position: top center;
@@ -20,13 +24,15 @@
   position: absolute;
   bottom: 60vh;
   left: 60vw;
-  font-weight: 100;
-}
+  /* font-weight: 200; */
+  font-size:2.5em;
+/* } */
 
-.header > h1 > span {
+/* .header > h1 >span  { */
   display: block;
+  color: white;
   font-weight: 700;
-  font-family: juego-tronos;
+  font-family: beer-font;
 }
 
 .header > .tagline {
