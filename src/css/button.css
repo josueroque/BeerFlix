@@ -1,0 +1,34 @@
+.button, .button.search, .button.primary, .button.secondary {
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  border: 1px solid #388E3C;
+  padding: 5px 10px;
+  color: #388E3C;
+  transition: all linear 0.3s;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #cccccc;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+.button.selected {
+  background-color: #388E3C;
+  color: #FFFFFF;
+}
+.button.primary {
+  background-color: #388E3C;
+  color: #FFFFFF;
+}
+.button.primary:hover {
+  background-color: #68c46d;
+}
+
+.button.search {
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

@@ -1,0 +1,25 @@
+@import "variables.css";
+@import "reset.css";
+@import "button.css";
+@import "loader.css";
+@import "input.css";
+@import "card.css";
+@import "icon.css";
+@import "detail.css";
+@import "mainSection.css";
+@import "navbar.css";
+@import "header.css";
+
+* {
+  font-family: 'Roboto', Verdana;
+}
+
+main {
+  margin-top: 100px;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+

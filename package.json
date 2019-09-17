@@ -1,0 +1,22 @@
+{
+  "name": "class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src",
+    "server": "./node_modules/.bin/http-server . -c-1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "http-server": "^0.9.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "husky": "^3.0.5"
+  }
+}

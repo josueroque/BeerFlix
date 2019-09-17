@@ -1,0 +1,81 @@
+.app-navbar {
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 100px;
+  min-height: 50px;
+  z-index: 3;
+  /* state */
+}
+
+@media (min-width: 768px) {
+  .app-navbar {
+    padding: 20px;
+  }
+}
+
+.app-navbar a {
+  font-size: 3rem;
+  color: #FFFFFF;
+}
+.app-navbar .fas {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.app-navbar .filter-container {
+  width: 100%;
+}
+
+.app-navbar .filter-input {
+  display: flex;
+  margin-right: 20px;
+}
+.app-navbar.no-search .filter-container,
+.app-navbar.no-search .fa-times {
+  display: none;
+}
+.app-navbar.no-search .navbar-logo,
+.app-navbar.no-search .fa-search {
+  display: block;
+}
+
+.app-navbar.filter .navbar-right-actions {
+  display: flex;
+}
+
+.app-navbar.no-filter .navbar-right-actions {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .app-navbar.no-search .filter-container {
+    display: block;
+  }
+  .app-navbar.no-search .navbar-icon {
+    display: none;
+  }
+  .app-navbar.filter .navbar-right-actions {
+    display: block;
+  }
+}
+
+.app-navbar.search .filter-container,
+.app-navbar.search .fa-times {
+  display: block;
+}
+
+.app-navbar.search.filter .navbar-right-actions {
+  width: 100%;
+}
+
+.app-navbar.search .navbar-logo,
+.app-navbar.search .fa-search {
+  display: none;
+}

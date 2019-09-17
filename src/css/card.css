@@ -1,0 +1,161 @@
+
+.card, .secondary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+.card i, .secondary i, .card button, .secondary button {
+  cursor: pointer;
+}
+.card .card-header, .secondary .card-header {
+  padding: 1em;
+}
+.card .card-header h2, .secondary .card-header h2 {
+  font-size: 1.2rem;
+  color: #212121;
+}
+.card .card-content, .secondary .card-content,
+.card .card-content-image img,
+.secondary .card-content-image img {
+  width: 100%;
+}
+.card .card-content, .secondary .card-content {
+  box-sizing: border-box;
+  padding: 0 1em 1em 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.card .card-content .card-content-image, .secondary .card-content .card-content-image {
+  width: 100%;
+  max-width: 85px;
+  min-width: 85px;
+}
+@media (min-width: 992px) {
+  .card .card-content .card-content-image, .secondary .card-content .card-content-image {
+    max-width: 200px;
+    min-width: 200px;
+  }
+}
+.card .card-content .card-content-text, .secondary .card-content .card-content-text {
+  padding-bottom: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.card .card-content .card-content-text p, .secondary .card-content .card-content-text p {
+  padding: 0 1em 1em 1em;
+  font-size: 1rem;
+  line-height: 1.3;
+  max-height: 80px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .card .card-content .card-content-text p, .secondary .card-content .card-content-text p {
+    max-height: 200px;
+  }
+}
+.card .card-content .card-content-text .rating-container, .secondary .card-content .card-content-text .rating-container {
+  position: absolute;
+  bottom: 0;
+  right: 2em;
+}
+
+.secondary {
+  /* state */
+}
+.secondary .card-header:after {
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  font-size: 1.5rem;
+  top: 13px;
+  right: 16px;
+}
+.secondary .card-header:after {
+  content: "";
+  font-weight: 900;
+}
+.secondary .card-content {
+  display: flex;
+  justify-content: space-between;
+}
+.secondary.close .card-header:after {
+  content: "";
+  font-weight: 900;
+}
+.secondary.close .card-content {
+  display: none;
+}
+@media (min-width: 992px) {
+  .secondary.close .card-content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 992px) {
+  .secondary {
+    max-width: 300px;
+    overflow: hidden;
+    padding-bottom: 1em;
+    /* state */
+  }
+  .secondary .card-content {
+    padding: 0;
+  }
+  .secondary .card-content .card-content-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: unset;
+    min-width: auto;
+  }
+  .secondary .card-content .card-content-image img {
+    height: 100%;
+  }
+  .secondary .rating-container {
+    display: none;
+  }
+  .secondary .card-content-text,
+.secondary .card-header {
+    transition: opacity 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .secondary .card-content-text h2,
+.secondary .card-header h2 {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+  }
+  .secondary:hover .card-header {
+    z-index: 1;
+  }
+  .secondary:hover .card-header:after {
+    display: none;
+  }
+  .secondary:hover .card-content .card-content-image {
+    display: none;
+  }
+  .secondary:hover .card-content p {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .secondary:hover .card-content-text,
+.secondary:hover .card-header {
+    visibility: visible;
+    opacity: 1;
+  }
+  .secondary:hover,
+.secondary:hover .card-header,
+.secondary:hover .card-content,
+.secondary:hover i {
+    background-color: #212121;
+    color: #FFFFFF;
+  }
+}
