@@ -2,7 +2,7 @@
 const API_KEY = 'YRSCXXT-K8C4DJJ-KRQJ83X-ERCJAMG';
 
 const api = (API_URL = 'https://web-bootcamp-exercise-beer-api-nijliozdcg.now.sh/api/v1') => {
-  const searchAPIEndpoint = `${API_URL}/beers`;
+ // const searchAPIEndpoint = `${API_URL}/beers`;
   const beersAPIEndpoint = `${API_URL}/beers`;
   return {
     getBeers: async text => {
@@ -22,7 +22,7 @@ const api = (API_URL = 'https://web-bootcamp-exercise-beer-api-nijliozdcg.now.sh
         }
         //console.log( response);
         const data = await response.json();
-        console.log(typeof(data));
+      //  console.log(typeof(data));
         // const formatData = data.forEach(item => {
         //   // if (item.show) {
         //   //   return item.show;
@@ -42,12 +42,21 @@ const api = (API_URL = 'https://web-bootcamp-exercise-beer-api-nijliozdcg.now.sh
     },
     getBeerDetail: async id => {
       try {
-        const response = await fetch(`${searchAPIEndpoint}/${id}`);
+      //  const requestUrlId = text ? `${beersAPIEndpoint}${text}` : beersAPIEndpoint;
+      const requestUrlId = `${beersAPIEndpoint}/${id}`;
+        const response = await fetch(requestUrlId
+          ,{
+          method:'GET',
+          headers:{
+          'X-API-KEY':API_KEY},
+        });
+      //  console.log(response);
         if (!response.ok) {
-          throw new Error('Error getting a show');
+          throw new Error('Error getting a beer');
         }
         const beer = await response.json();
-        return beer;
+        console.log(beer['beer']);
+        return beer['beer'];
       } catch (err) {
         console.error(err);
         throw err;

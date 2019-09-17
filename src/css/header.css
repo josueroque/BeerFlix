@@ -3,7 +3,9 @@
   font-family: juego-tronos;
   src: url(../fonts/gt.ttf)
 }
-
+.header-hide{
+  display: none;
+}
 .header{
   height: 90vh;
   opacity:0.75;

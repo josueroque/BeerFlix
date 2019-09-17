@@ -9,6 +9,8 @@ import addQuoteListener from './quotesForm.js';
 page('/',() =>{
   console.log('Home page');
   //handleNavbar('no-filter','filter');
+  const head = document.querySelector('header');
+  head.classList.remove('header-hide');
   showFilter();
   hideQuotesForm();
   renderBeersDOM();
