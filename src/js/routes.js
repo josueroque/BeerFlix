@@ -12,7 +12,7 @@ page('/',() =>{
   const head = document.querySelector('header');
   head.classList.remove('header-hide');
   showFilter();
-  hideQuotesForm();
+  //hideQuotesForm();
   renderBeersDOM();
 });
 

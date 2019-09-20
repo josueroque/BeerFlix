@@ -15,19 +15,19 @@ const addQuoteListener=id=>{
     const quotesForm=document.querySelector('#quote-form');
     const quotesInput =document.querySelector('#quote');
     const quoteList=document.querySelector('#quoteList');
-    quotesForm.addEventListener('submit',async evt =>{
-        evt.preventDefault();
-        try {
-            if(quotesInput.validity.valid){
-               const response= await createQuote(id, quotesInput.value);
-                quoteList.innerHTML+=quoteTemplate(response);
-               // const data=await getQuote(id);
-            }
-        } catch (err) {
-            console.error(err);
-            //handle error
-        }
-    });
+    // quotesForm.addEventListener('submit',async evt =>{
+    //     evt.preventDefault();
+    //     try {
+    //         if(quotesInput.validity.valid){
+    //            const response= await createQuote(id, quotesInput.value);
+    //             quoteList.innerHTML+=quoteTemplate(response);
+    //            // const data=await getQuote(id);
+    //         }
+    //     } catch (err) {
+    //         console.error(err);
+    //         //handle error
+    //     }
+    // });
 };
 
 export default addQuoteListener;

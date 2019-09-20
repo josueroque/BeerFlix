@@ -12,10 +12,12 @@ const searchIcon = document.querySelector('#navbar-search');
 const closeIcon = document.querySelector('#navbar-close');
 const searchForm = document.querySelector('#search-form');
 const searchInput = document.querySelector('#navbar .input.search');
+const searchDate = document.querySelector('#navbar .input.search-date');
 
-console.log('comprobacion' + searchInput.value);
+//console.log('comprobacion' + searchInput.value);
 searchInput.value=getItem('navbar-input');
-console.log('comprobacion2' + searchInput.value);
+searchDate.value=getItem('navbar-date');
+//console.log('comprobacion2' + searchInput.value);
 
 const handleNavBar = toggle(navbar);
 
@@ -31,11 +33,14 @@ closeIcon.addEventListener('click', () => {
 searchForm.addEventListener('submit', evt => {
   evt.preventDefault();
   //console.log('desde navbar' + searchInput.validity.valid);
+
+
   if (searchInput.validity.valid) {
     // render shows
     setItem('navbar-input',searchInput.value);
+    setItem('navbar-date',searchDate.value);
     console.log('desde navbar 3'+searchInput.value);
-    renderBeersDOM(searchInput.value);
+    renderBeersDOM(searchInput.value,searchDate.value);
   }
 });
 
