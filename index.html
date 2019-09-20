@@ -9,14 +9,22 @@
     <!-- styles -->
     <link rel="stylesheet" href="/src/css/styles.css">
   </head>
-  <body>
+  <body>|
 
-      <header class="header">
-          <h1>Welcome to <span>BeerFlix</span></h1>
-          <!-- <div class="header-image"></div> -->
-          <p class="tagline">
-            This is a site where you can find anything about the facinating world of the world's best beers
-          </p>
+      <header class="header" class="back-header" style="position: relative;margin-top:4vw;   ">
+        <picture class="back-header">
+          <source
+            srcset="
+            /src/img/beer5.jpg 320w,
+            /src/img/beer9.jpg 540w,
+            /src/img/beer2.2.jpg 768w,
+            "
+            media="(min-width:768px)"
+          >
+          <source srcset="/src/img/beer12.jpg">
+          <img src="/src/img/beer10.jpg" alt="BeerFlix" />  
+                      
+        </picture>
       </header>
     <!-- navbar -->
     <navbar id="navbar" class="app-navbar no-search filter">
@@ -44,6 +52,7 @@
     <!-- main-section end -->
 <!-- comment-form -->
 <section id="detailSection" class="detail-section">
+
   <div id="detail" class="detail-content"></div>
   <!-- <div class="quotes-list">
     <h2>Quotes</h2>

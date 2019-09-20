@@ -15,19 +15,9 @@ const templateBeer = ({ beerId,principal, name, image, description,getComments }
         <div class="card-content-text">
           <p>${description}
           </p>
-        <h2>Comments:</h2>
+        
 
-          <div class="rating-container">
-            <button class="icon">
-              <i class="fas fa-star"></i>
-            </button>
-            <button class="icon">
-              <i class="far fa-star"></i>
-            </button>
-            <button class="icon">
-              <i class="far fa-star"></i>
-            </button>
-          </div>
+
         </div>
       </div>
     </div>
@@ -49,6 +39,7 @@ const renderBeers = (element, beers ) => {
     }).join('')
   element.innerHTML = `
   <div class="show-section">
+
   ${htmlBeers}
   </div>
   `;

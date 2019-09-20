@@ -11,13 +11,19 @@
   display: none;
 }
 .header{
-  height: 45vw;
+  height: 30vw;
+
   /* opacity:0.65; */
-  background-image: url(../img/beer1.jpg);
-  background-repeat: no-repeat;
+  /* background-image: url(../img/beer1.jpg); */
+  /* background-repeat: no-repeat;
   background-position: top center;
 
-  background-size: cover;
+  background-size: cover; */
+}
+
+.back-header {
+  height: 30vw;
+  max-height:200px; 
 }
 
 .header > h1 {

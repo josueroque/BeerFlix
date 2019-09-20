@@ -1,7 +1,7 @@
 
 import api from './api.js';
 //import { renderQuotes } from './quotes.js';
-import {toggle,toggleClass} from './ui.js';
+import {toggle,toggleClass,renderLoader} from './ui.js';
 
 const { getBeerDetail,createQuote } = api();
 
@@ -9,7 +9,9 @@ const { getBeerDetail,createQuote } = api();
 
 const detailTemplate = ({ id, name, image, description,brewersTips,firstBrewed,commentsList }) => `
   <div class="detail-section">
+
     <header id="${id}">
+
       <div class="title-section">
         <h1>${name}</h1>
       </div>
@@ -54,28 +56,11 @@ const detailTemplate = ({ id, name, image, description,brewersTips,firstBrewed,c
   </div>
 `;
 
-//  addQuoteListener =id=>{
-//   const quotesForm=document.querySelector('#quote-form');
-//   const quotesInput =document.querySelector('#quote');
-//   // const quoteList=document.querySelector('#quoteList');
-//   quotesForm.addEventListener('submit',async evt =>{
-//       evt.preventDefault();
-//       try {
-//           if(quotesInput.validity.valid){
-//              const response= await createQuote(id, quotesInput.value);
-//               quoteList.innerHTML+=quoteTemplate(response);
-//              // const data=await getQuote(id);
-//           }
-//       } catch (err) {
-//           console.error(err);
-//           //handle error
-//       }
-//   });
-// };
 
 
 const renderDetail = async id => {
   try {
+    renderLoader('hide','show');
     const head = document.querySelector('header');
    const comments = document.getElementById('com');
     const selector = document.querySelector('main');
@@ -113,6 +98,9 @@ const renderDetail = async id => {
   
   } catch (err) {
     console.error(err);
+  }
+  finally{
+    renderLoader('show','hide');
   }
 };
 
