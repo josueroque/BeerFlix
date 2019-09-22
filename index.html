@@ -10,42 +10,61 @@
     <link rel="stylesheet" href="/src/css/styles.css">
   </head>
   <body>|
+<div>
+  <navbar id="navbar" class="app-navbar no-search filter">
+    <div class="navbar-logo">
+      <a href="/">BeerFlix</a>
+    </div>
+    <div class="navbar-right-actions">
+      <div class="filter-container">
+        <form id="search-form" class="filter-input" novalidate>
+          <input id="date" data-pattern-mismatch="Input invalid" placeholder="Pick a date" class="input search-date" type="date">
+          <input data-pattern-mismatch="Input invalid" placeholder="type a beer name" class="input search" type="text">
+          <button type="submit" class="button search">Search</button>
+        </form>
+      </div>
+      <div class="navbar-icon">
+        <i id="navbar-search" class="fas fa-search"></i>
+        <i id="navbar-close" class="fas fa-times"></i>
+      </div>
+    </div>
+  </navbar>
+  <!-- navbar-end -->
+  <header id ="back-header" class="back-header header">
+    <div class="picture-container">
+      <picture class="back-header" >
+        <source srcset="
+                    /src/img/beer2.2-tbl.jpg 320w,
+                    /src/img/beer2.2-tbl.jpg 768w
+                      "
+                       media="(min-width:768px)"
+        >
+        <source srcset="
+                /src/img/beer5-400.jpg 320w,
+                /src/img/beer5.jpg 480w
+          "
+                    media="(min-width:480px)"
+        >
+        <source srcset="
+                /src/img/beer10.jpg 160w,
+                /src/img/beer10-320.jpg 320w
+          "
+                    media="(min-width:320px)"
+        >
+        <img src="/src/img/beer10-small.jpg" alt="BeerFlix" />  
+                    
+      </picture>
+    <!-- <img
+      src="src/img/beer2.2-tbl.jpg"
 
-      <header id ="back-header" class="back-header header" style="position: relative;margin-top:3vw;   ">
-        <picture class="back-header" styles="width:100%;heigth:100%">
-          <source srcset="
-                      /src/img/beer2.2-tbl.jpg 480w,
-                      /src/img/beer2.2-tbl.jpg 768w
-                        "
-                         media="(min-width:768px)"
-          >
-          <source srcset="/src/img/beer5-mob.jpg" media="(min-width:480px)" >
-          <source srcset="/src/img/beer5.jpg" media="(min-width:320px)" >
-          <img src="/src/img/beer10.jpg" alt="BeerFlix" />  
-                      
-        </picture>
-        <h2>Pick a Beer to see the Details</h2>
-      </header>
+      
+    />   -->
+  </div>
+    <h2>Pick a Beer to see the Details</h2>
+</header>
+
+</div>
     <!-- navbar -->
-    <navbar id="navbar" class="app-navbar no-search filter">
-      <div class="navbar-logo">
-        <a href="/">BeerFlix</a>
-      </div>
-      <div class="navbar-right-actions">
-        <div class="filter-container">
-          <form id="search-form" class="filter-input" novalidate>
-            <input id="date" data-pattern-mismatch="Input invalid" placeholder="Pick a date" class="input search-date" type="date">
-            <input data-pattern-mismatch="Input invalid" placeholder="type a beer name" class="input search" type="text">
-            <button type="submit" class="button search">Search</button>
-          </form>
-        </div>
-        <div class="navbar-icon">
-          <i id="navbar-search" class="fas fa-search"></i>
-          <i id="navbar-close" class="fas fa-times"></i>
-        </div>
-      </div>
-    </navbar>
-    <!-- navbar-end -->
     <!-- main–section -->
     <main>
     </main>
