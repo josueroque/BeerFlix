@@ -11,9 +11,9 @@
   display: none;
 }
 .header{
-  height: 30vw;
+  height: 25vw;
 
-  /* opacity:0.65; */
+  opacity:0.65;
   /* background-image: url(../img/beer1.jpg); */
   /* background-repeat: no-repeat;
   background-position: top center;
@@ -22,10 +22,20 @@
 }
 
 .back-header {
-  height: 30vw;
-  max-height:200px; 
+  /* height: 30vw;
+  max-height:200px;  */
+}
+picture{
+  max-height: auto;
+  max-width: 100%;
 }
 
+.header > h2 {
+  font-size:2.5em;
+  font-weight: 700;
+  text-align: center;
+  color: darkgoldenrod;
+}
 .header > h1 {
   position: absolute;
   bottom: 60vh;
@@ -46,3 +56,35 @@
   top: 60vh;
   left: 60vw;
 }
+
+@media all and (max-width: 768px) {
+  .header > h2{
+
+    font-size: 1.5em;
+  }
+ picture{
+    /* margin-top:12vw; */
+    margin-top: 10vw;
+  }
+  }
+
+@media all and (max-width: 480px) {
+  picture{
+    /* margin-top:12vw; */
+    margin-top: 10vw;
+  }
+  .header > h2{
+
+    visibility: hidden;
+  }
+  #back-header{
+    /* margin-top:22vw; */
+  }
+  }
+
+  @media all and (max-width: 320px) {
+    .header > h2{
+      visibility: hidden;
+    
+    }
+    }

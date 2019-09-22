@@ -11,20 +11,20 @@
   </head>
   <body>|
 
-      <header class="header" class="back-header" style="position: relative;margin-top:4vw;   ">
-        <picture class="back-header">
-          <source
-            srcset="
-            /src/img/beer5.jpg 320w,
-            /src/img/beer9.jpg 540w,
-            /src/img/beer2.2.jpg 768w,
-            "
-            media="(min-width:768px)"
+      <header id ="back-header" class="back-header header" style="position: relative;margin-top:3vw;   ">
+        <picture class="back-header" styles="width:100%;heigth:100%">
+          <source srcset="
+                      /src/img/beer2.2-tbl.jpg 480w,
+                      /src/img/beer2.2-tbl.jpg 768w
+                        "
+                         media="(min-width:768px)"
           >
-          <source srcset="/src/img/beer12.jpg">
+          <source srcset="/src/img/beer5-mob.jpg" media="(min-width:480px)" >
+          <source srcset="/src/img/beer5.jpg" media="(min-width:320px)" >
           <img src="/src/img/beer10.jpg" alt="BeerFlix" />  
                       
         </picture>
+        <h2>Pick a Beer to see the Details</h2>
       </header>
     <!-- navbar -->
     <navbar id="navbar" class="app-navbar no-search filter">
@@ -50,24 +50,15 @@
     <main>
     </main>
     <!-- main-section end -->
-<!-- comment-form -->
+
 <section id="detailSection" class="detail-section">
 
   <div id="detail" class="detail-content"></div>
-  <!-- <div class="quotes-list">
-    <h2>Quotes</h2>
-    <div id="quoteList"> -->
+
     </div>
   </div>
-  <!-- <form id="quote-form" class="quote-form" novalidate>
-    <div class="quote-input">
-      <label for="quote">Quote of this show</label>
-      <input required id="quote" placeholder="Add your quote" class="input primary" type="text">
-    </div>
-    <button type="submit" class="button primary">Add quote</button>
-  </form> -->
+
 </section>
-<!-- comment-form end -->
 
     <!--loader -->
     <div id="loader" class="loader-container hide">

@@ -4,10 +4,11 @@
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
-  padding: 0;
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  /* margin-left: 10px; */
+  row-gap: 5px;
 }
 .card i, .secondary i, .card button, .secondary button {
   cursor: pointer;
@@ -128,11 +129,11 @@
     visibility: hidden;
     opacity: 0;
   }
-  .secondary .card-content-text h2,
+.secondary .card-content-text h2,
 .secondary .card-header h2 {
-  font-size: 1.2rem;
-  color:black;
-  font-weight: 700;
+    font-size: 1.2rem;
+    color:black;
+    font-weight: 700;
   }
   .secondary:hover .card-header {
     z-index: 1;
@@ -142,7 +143,7 @@
   }
   .secondary:hover .card-content .card-content-image {
     /* display: none; */
-    opacity: 0.30;
+   opacity: 0.30;
   }
   .secondary:hover .card-content p {
     max-height: 200px;
@@ -157,7 +158,8 @@
 .secondary:hover .card-header,
 .secondary:hover .card-content,
 .secondary:hover i {
-  background-color: white;
-  color:black;
+    background-color: white;
+    color:black;
+   
   }
 }

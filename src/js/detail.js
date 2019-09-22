@@ -80,8 +80,8 @@ const renderDetail = async id => {
             
             if(quotesInput.validity.valid){
                const response= await createQuote(id, quotesInput.value);
-               console.log(response);
-               console.log('ok: ' +response.success);
+              //  console.log(response);
+              //  console.log('ok: ' +response.success);
                let today = new Date().toISOString() //.slice(0, 10);
 
 

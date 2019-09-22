@@ -81,7 +81,4 @@ const renderBeersDOM = async (text,date) => {
   }
 };
 
-
-
-
 export { renderBeersDOM };
