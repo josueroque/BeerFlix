@@ -11,8 +11,8 @@
   display: none;
 }
 .header{
-  height: 30vw;
-  margin-top: 5vw;
+  height: 25vw;
+  margin-top: 4vw;
 position: relative;
   opacity:0.65;
   /* background-image: url(../img/beer1.jpg); */
@@ -58,8 +58,8 @@ position: relative;
   width: 100% !important;
   height: 30vw !important;
   min-width: 100%;
- min-height: 30vw;
- margin-top: 10vw ;
+ min-height: 25vw;
+
  min-width: 100% !important;
 }
 picture{
