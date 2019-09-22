@@ -2,7 +2,7 @@
 import { toggleClass, renderLoader } from './ui.js';
 import api from './api.js';
 
-const templateBeer = ({ beerId,principal, name, image, description,getComments }) => `
+const templateBeer = ({ beerId,principal, name, image, description }) => `
 <a href="/detail/${beerId}">
     <div class="card ${principal ? 'principal' : 'secondary close'}">
       <header class="card-header">
@@ -31,12 +31,12 @@ const templateBeer = ({ beerId,principal, name, image, description,getComments }
 
 const renderBeers = (element, beers ) => {
  //console.log(beers);
-  const htmlBeers = beers.slice(0,10).map((beer,index) =>{
+  const htmlBeers = beers.slice(0,10).map((beer) =>{
     // if(index<0){
     //   return templateBeer({...beer,principal:true});
     // }
        return templateBeer({...beer,principal:false});
-    }).join('')
+    }).join('');
   element.innerHTML = `
   <div class="show-section">
 

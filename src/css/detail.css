@@ -19,11 +19,7 @@ text-align: justify;
 
 }
 
-.image-detail{
-  /* width:10vw;
-  height:40vw; */
-  
-}
+
 .error {
   height: 50vw;
   width: 100%;
@@ -46,9 +42,7 @@ text-align: justify;
   width: 100%;
 }
 @media (min-width:1px) {
-  .image-container{
-    /* align-content: center !important; */
-  }
+ 
   .image-container img{
    margin-left: 35vw !important;
     width:25vw !important;

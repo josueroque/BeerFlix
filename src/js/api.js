@@ -90,7 +90,7 @@ const api = (API_URL = 'https://web-bootcamp-exercise-beer-api-nijliozdcg.now.sh
         }
         const beer = await response.json();
        
-        let commentsList=''
+        let commentsList='';
        if (beer['beer']['comment']){
           beer['beer']['comment'].map(item =>{
             commentsList+=item['comment'] + ', '+item['dateComment']+ '<br/>';

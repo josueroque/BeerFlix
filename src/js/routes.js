@@ -1,7 +1,7 @@
 /*eslint-disable no-undef*/
 import { renderBeersDOM } from './beers.js';
-import {hideFilter,showFilter} from './navbar.js'
-import {showQuotesForm,hideQuotesForm} from './ui.js';
+import {hideFilter,showFilter} from './navbar.js';
+
 import renderDetail from './detail.js';
 //import addQuoteListener from './quotesForm.js';
 //import {handleNavbar} from './navbar.js';

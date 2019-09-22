@@ -1,7 +1,7 @@
 
 import api from './api.js';
 //import { renderQuotes } from './quotes.js';
-import {toggle,toggleClass,renderLoader} from './ui.js';
+import {toggleClass,renderLoader} from './ui.js';
 
 const { getBeerDetail,createQuote } = api();
 
@@ -62,7 +62,7 @@ const renderDetail = async id => {
   try {
     renderLoader('hide','show');
     const head = document.querySelector('header');
-   const comments = document.getElementById('com');
+  //  const comments = document.getElementById('com');
     const selector = document.querySelector('main');
    // const [beer] = await Promise.all([getBeerDetail(id), renderQuotes(id)]);
 
@@ -82,7 +82,7 @@ const renderDetail = async id => {
                const response= await createQuote(id, quotesInput.value);
               //  console.log(response);
               //  console.log('ok: ' +response.success);
-               let today = new Date().toISOString() //.slice(0, 10);
+               let today = new Date().toISOString(); //.slice(0, 10);
 
 
                if (response.success){
